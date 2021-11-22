@@ -2,7 +2,7 @@
 
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
-const navLinksBG = document.querySelector("nav .nav-links-bg");
+const navLinksBG = document.querySelector(".nav-links-bg");
 const body = document.body;
 
 hamburger.addEventListener("click", (event) => {
