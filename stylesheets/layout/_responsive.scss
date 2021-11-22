@@ -1,0 +1,116 @@
+@media screen and (min-width: 900px) {
+	body {
+		overflow-x: hidden;
+	}
+	nav {
+		.nav-container {
+			position: static;
+
+			.hamburger,
+			.hamburger-active {
+				display: none;
+			}
+
+			.nav-links {
+				visibility: visible;
+				position: static;
+				top: 0;
+				width: 40%;
+				background-color: var(--white);
+				flex-direction: row;
+				transform: translateY(0);
+				overflow: visible;
+				transition: none;
+
+				a {
+					width: 20%;
+					color: var(--grayish-blue);
+					font-size: 0.9rem;
+					visibility: visible;
+					transition: 0.5s;
+
+					&:hover {
+						color: var(--dark-blue);
+						position: relative;
+
+						&::before {
+							display: inline-block;
+							content: " ";
+							position: absolute;
+							bottom: -10px;
+							left: 0;
+							width: 100%;
+							height: 8px;
+							background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+						}
+					}
+				}
+			}
+
+			button {
+				@include button-component;
+			}
+		}
+
+		.nav-links-bg,
+		.nav-links-bg-active {
+			display: none;
+		}
+	}
+
+	.two-color-bg {
+		display: none;
+	}
+
+	.first-section {
+		@include container;
+		height: calc(700px - 70px);
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		row-gap: 0px;
+
+		.mobile-image {
+			order: 2;
+			width: 60%;
+			height: auto;
+			align-self: stretch;
+			img {
+				display: none;
+			}
+
+			.desktop-two-color-bg {
+				background: url("../../images/bg-intro-desktop.svg") no-repeat center;
+				background-size: cover;
+				width: 220%;
+				height: 630px;
+			}
+			.desktop-mobile-bg {
+				position: absolute;
+				top: -100px;
+				right: -260px;
+				background: url("../../images/image-mockups.png") no-repeat right;
+				background-size: contain;
+				width: 110%;
+				height: 900px;
+			}
+		}
+
+		.next-generation {
+			width: 38%;
+			order: 1;
+			h1 {
+				font-size: 2.4rem;
+				text-align: left;
+			}
+			p {
+				text-align: left;
+			}
+
+			button {
+				@include button-component;
+				margin-left: 0;
+			}
+		}
+	}
+}
