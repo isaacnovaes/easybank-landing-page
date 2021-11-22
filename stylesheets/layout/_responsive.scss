@@ -2,8 +2,8 @@
 	body {
 		overflow-x: hidden;
 	}
-	nav {
-		.nav-container {
+	header {
+		nav {
 			position: static;
 
 			.hamburger,
@@ -63,8 +63,8 @@
 	}
 
 	.first-section {
-		@include container;
 		height: calc(700px - 70px);
+		padding-bottom: 0;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
@@ -110,6 +110,62 @@
 			button {
 				@include button-component;
 				margin-left: 0;
+			}
+		}
+	}
+	.second-section {
+		.second-section-container {
+			.second-section-header {
+				h1,
+				p {
+					text-align: left;
+				}
+				p {
+					width: 50%;
+				}
+			}
+
+			.cards-block {
+				justify-content: space-between;
+
+				.card {
+					img {
+						margin-left: 0;
+					}
+					h2,
+					p {
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+
+	.third-section {
+		.third-section-container {
+			h1 {
+				margin-top: 50px;
+				text-align: left;
+			}
+
+			.cards-block {
+				justify-content: space-between;
+				row-gap: 26.5px;
+
+				.card {
+					max-width: 280px;
+					&:hover {
+						cursor: pointer;
+						h2 {
+							transition: 0.5;
+							color: var(--lime-green);
+						}
+					}
+
+					img {
+						max-height: 180px;
+					}
+				}
 			}
 		}
 	}

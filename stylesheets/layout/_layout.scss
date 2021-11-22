@@ -2,12 +2,12 @@
 	overflow-y: hidden;
 }
 
-nav {
+header {
 	background-color: var(--white);
 	position: relative;
 	z-index: 3;
 
-	.nav-container {
+	nav {
 		@include container;
 		height: 70px;
 		padding: 20px 0;
@@ -99,6 +99,7 @@ nav {
 
 .first-section {
 	@include container;
+	padding-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 25px;
@@ -121,24 +122,119 @@ nav {
 
 	.next-generation {
 		h1 {
-			font-size: 2.2rem;
-			text-align: center;
-			color: var(--dark-blue);
+			@include regular-heading;
 		}
 
 		p {
-			margin-top: 15px;
-			color: var(--grayish-blue);
-			font-size: 0.95rem;
-			font-weight: 400;
-			text-align: center;
-			line-height: 1.5;
+			@include regular-paragraph;
 		}
 
 		button {
 			@include button-component;
 			margin: 0 auto;
 			margin-top: 30px;
+		}
+	}
+}
+
+.second-section {
+	background-color: var(--light-grayish-blue);
+
+	.second-section-container {
+		@include container;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 80px 0;
+		row-gap: 50px;
+
+		.second-section-header {
+			h1 {
+				@include regular-heading;
+			}
+			p {
+				@include regular-paragraph;
+			}
+		}
+
+		.cards-block {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 50px;
+
+			.card {
+				width: 250px;
+				align-self: stretch;
+				img {
+					display: block;
+					width: 72px;
+					margin: 0 auto;
+				}
+				h2 {
+					@include regular-heading;
+					font-size: 1.3rem;
+					font-weight: 400;
+					margin-top: 20px;
+				}
+				p {
+					@include regular-paragraph;
+				}
+			}
+		}
+	}
+}
+
+.third-section {
+	.third-section-container {
+		@include container;
+		h1 {
+			@include regular-heading;
+			margin-top: 50px;
+		}
+
+		.cards-block {
+			margin: 50px 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			row-gap: 50px;
+			column-gap: 26px;
+
+			.card {
+				width: 100%;
+				max-width: 400px;
+				border-radius: 10px;
+				background-color: var(--very-light-gray);
+
+				img {
+					width: 100%;
+					max-height: 250px;
+					object-fit: cover;
+					border-radius: 10px 10px 0 0;
+				}
+
+				.card-description {
+					padding: 10px 30px;
+					p:first-of-type {
+						@include regular-paragraph;
+						font-size: 0.65rem;
+						text-align: left;
+						margin-bottom: 10px;
+					}
+					h2 {
+						@include regular-heading;
+						font-size: 1.2rem;
+						text-align: left;
+					}
+					p:last-of-type {
+						@include regular-paragraph;
+						font-size: 0.8rem;
+						text-align: left;
+						margin-bottom: 10px;
+					}
+				}
+			}
 		}
 	}
 }
