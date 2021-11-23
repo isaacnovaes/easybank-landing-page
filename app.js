@@ -20,18 +20,18 @@ const options = {
 	threshold: 0.5,
 };
 
+function animateCard(entries, observer) {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("card-observer-animate");
+			observer.unobserve(entry.target);
+		}
+	});
+}
 const cardObserver = new IntersectionObserver(animateCard, options);
 
 secondSectionCards.forEach((card) => cardObserver.observe(card));
 thirdSectionCards.forEach((card) => cardObserver.observe(card));
-
-function animateCard(entries, observer) {
-	const [entry] = entries;
-	if (entry.isIntersecting) {
-		entry.target.classList.add("card-observer-animate");
-		observer.unobserve(entry.target);
-	}
-}
 
 const footerObserver = new IntersectionObserver(animateFooter, options);
 

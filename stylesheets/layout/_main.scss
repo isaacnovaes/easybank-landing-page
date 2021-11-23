@@ -95,13 +95,8 @@
 				width: 250px;
 				align-self: stretch;
 				opacity: 0; // IntersectionObserver animation
+				transform: translateY(50px);
 				transition: 1s;
-
-				@for $i from 1 through 4 {
-					&:nth-child(#{$i}) {
-						transform: translateY(50px * $i); // IntersectionObserver animation
-					}
-				}
 
 				img {
 					display: block;
@@ -120,11 +115,7 @@
 			}
 
 			.card-observer-animate {
-				@for $i from 1 through 4 {
-					&:nth-child(#{$i}) {
-						transform: translateY(0); // IntersectionObserver animation
-					}
-				}
+				transform: translateY(0);
 				opacity: 1;
 			}
 		}
@@ -153,13 +144,8 @@
 				border-radius: 10px;
 				background-color: var(--very-light-gray);
 				opacity: 0; // IntersectionObserver animation
+				transform: translateY(50px); // IntersectionObserver animation
 				transition: 1s;
-
-				@for $i from 1 through 4 {
-					&:nth-child(#{$i}) {
-						transform: translateY(50px * $i); // IntersectionObserver animation
-					}
-				}
 
 				img {
 					width: 100%;
@@ -191,11 +177,7 @@
 			}
 
 			.card-observer-animate {
-				@for $i from 1 through 4 {
-					&:nth-child(#{$i}) {
-						transform: translateY(0); // IntersectionObserver animation
-					}
-				}
+				transform: translateY(0);
 				opacity: 1;
 			}
 		}

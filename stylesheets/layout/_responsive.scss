@@ -150,6 +150,12 @@
 					justify-content: space-between;
 
 					.card {
+						transform: translateY(0px);
+						@for $i from 1 through 4 {
+							&:nth-child(#{$i}) {
+								transform: translateY(50px * $i); // IntersectionObserver animation
+							}
+						}
 						img {
 							margin-left: 0;
 						}
@@ -157,6 +163,15 @@
 						p {
 							text-align: left;
 						}
+					}
+
+					.card-observer-animate {
+						@for $i from 1 through 4 {
+							&:nth-child(#{$i}) {
+								transform: translateY(0);
+							}
+						}
+						opacity: 1;
 					}
 				}
 			}
@@ -175,6 +190,11 @@
 
 					.card {
 						max-width: 280px;
+						@for $i from 1 through 4 {
+							&:nth-child(#{$i}) {
+								transform: translateY(50px * $i); // IntersectionObserver animation
+							}
+						}
 						&:hover {
 							cursor: pointer;
 							h2 {
@@ -186,6 +206,14 @@
 						img {
 							max-height: 180px;
 						}
+					}
+					.card-observer-animate {
+						@for $i from 1 through 4 {
+							&:nth-child(#{$i}) {
+								transform: translateY(0);
+							}
+						}
+						opacity: 1;
 					}
 				}
 			}
