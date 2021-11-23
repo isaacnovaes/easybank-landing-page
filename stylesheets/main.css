@@ -378,9 +378,6 @@ header .nav-links-bg-active {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -448,9 +445,6 @@ header .nav-links-bg-active {
   max-width: 400px;
   border-radius: 10px;
   background-color: var(--very-light-gray);
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -509,7 +503,6 @@ footer {
   background-color: var(--dark-blue);
   -webkit-transition: 1s;
   transition: 1s;
-  opacity: 0;
 }
 
 footer .footer-container {
@@ -847,22 +840,6 @@ footer .footer-container .button-block p {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  main .second-section .second-section-container .cards-block .card:nth-child(1) {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  main .second-section .second-section-container .cards-block .card:nth-child(2) {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  main .second-section .second-section-container .cards-block .card:nth-child(3) {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
-  }
-  main .second-section .second-section-container .cards-block .card:nth-child(4) {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
   main .second-section .second-section-container .cards-block .card img {
     margin-left: 0;
   }
@@ -901,22 +878,6 @@ footer .footer-container .button-block p {
   }
   main .third-section .third-section-container .cards-block .card {
     max-width: 280px;
-  }
-  main .third-section .third-section-container .cards-block .card:nth-child(1) {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  main .third-section .third-section-container .cards-block .card:nth-child(2) {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  main .third-section .third-section-container .cards-block .card:nth-child(3) {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
-  }
-  main .third-section .third-section-container .cards-block .card:nth-child(4) {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
   }
   main .third-section .third-section-container .cards-block .card:hover {
     cursor: pointer;
