@@ -94,8 +94,8 @@
 			.card {
 				width: 250px;
 				align-self: stretch;
-				// opacity: 0; // IntersectionObserver animation
-				// transform: translateY(50px);
+				opacity: 0; // IntersectionObserver animation
+				transform: translateY(50px);
 				transition: 1s;
 
 				img {
@@ -143,8 +143,8 @@
 				max-width: 400px;
 				border-radius: 10px;
 				background-color: var(--very-light-gray);
-				// opacity: 0; // IntersectionObserver animation
-				// transform: translateY(50px); // IntersectionObserver animation
+				opacity: 0; // IntersectionObserver animation
+				transform: translateY(50px); // IntersectionObserver animation
 				transition: 1s;
 
 				img {

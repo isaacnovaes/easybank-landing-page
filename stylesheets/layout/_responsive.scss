@@ -151,11 +151,11 @@
 
 					.card {
 						transform: translateY(0px);
-						// @for $i from 1 through 4 {
-						// 	&:nth-child(#{$i}) {
-						// 		transform: translateY(50px * $i); // IntersectionObserver animation
-						// 	}
-						// }
+						@for $i from 1 through 4 {
+							&:nth-child(#{$i}) {
+								transform: translateY(50px * $i); // IntersectionObserver animation
+							}
+						}
 						img {
 							margin-left: 0;
 						}
@@ -190,11 +190,11 @@
 
 					.card {
 						max-width: 280px;
-						// @for $i from 1 through 4 {
-						// 	&:nth-child(#{$i}) {
-						// 		transform: translateY(50px * $i); // IntersectionObserver animation
-						// 	}
-						// }
+						@for $i from 1 through 4 {
+							&:nth-child(#{$i}) {
+								transform: translateY(50px * $i); // IntersectionObserver animation
+							}
+						}
 						&:hover {
 							cursor: pointer;
 							h2 {
