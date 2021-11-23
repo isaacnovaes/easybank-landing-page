@@ -51,10 +51,43 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I have practice scroll animations with the help of the IntersectionObserver API. It was awesome to realize that the code below can cause a bug if more than one element is observed at the same time
 
-To see how you can add code snippets, see below:
+```js
+function animateCard(entries, observer) {
+	const [entry] = entries;
+	if (entry.isIntersecting) {
+		entry.target.classList.add("card-observer-animate");
+		observer.unobserve(entry.target);
+	}
+}
+```
+
+If there is more than one element observed at the same time, only the first element will receive the animation, while the other won't. So I concluded that the best thing is to do the following instead:
+
+```js
+function animateCard(entries, observer) {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("card-observer-animate");
+			observer.unobserve(entry.target);
+		}
+	});
+}
+```
+
+Here, doesn't matter how many elements are observed, all of them will get the animation.
+
+Also, I am very proud because I used the SASS for loop for the first time:
+
+```scss
+@for $i from 1 through 4 {
+  &:nth-child(#{$i}) {
+    transform: translateY(50px * $i); 
+  }
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I really liked working with the IntersectionObserver API, because it makes it so easy to determine what happens to an element as soon as it comes into the viewport. From now on, whenever I can, I will try to use it in my next projects so that I can practice it even more
