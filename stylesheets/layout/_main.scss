@@ -36,6 +36,7 @@
 	}
 
 	.next-generation {
+		margin-top: 80px;
 		h1 {
 			@include regular-heading;
 		}
@@ -48,6 +49,18 @@
 			@include button-component;
 			margin: 0 auto;
 			margin-top: 30px;
+			animation: fadeButton 1s 1s backwards;
+		}
+
+		@keyframes fadeButton {
+			from {
+				transform: translateX(-500px);
+				opacity: 0;
+			}
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -81,6 +94,15 @@
 			.card {
 				width: 250px;
 				align-self: stretch;
+				opacity: 0; // IntersectionObserver animation
+				transition: 1s;
+
+				@for $i from 1 through 4 {
+					&:nth-child(#{$i}) {
+						transform: translateY(50px * $i); // IntersectionObserver animation
+					}
+				}
+
 				img {
 					display: block;
 					width: 72px;
@@ -95,6 +117,15 @@
 				p {
 					@include regular-paragraph;
 				}
+			}
+
+			.card-observer-animate {
+				@for $i from 1 through 4 {
+					&:nth-child(#{$i}) {
+						transform: translateY(0); // IntersectionObserver animation
+					}
+				}
+				opacity: 1;
 			}
 		}
 	}
@@ -121,6 +152,14 @@
 				max-width: 400px;
 				border-radius: 10px;
 				background-color: var(--very-light-gray);
+				opacity: 0; // IntersectionObserver animation
+				transition: 1s;
+
+				@for $i from 1 through 4 {
+					&:nth-child(#{$i}) {
+						transform: translateY(50px * $i); // IntersectionObserver animation
+					}
+				}
 
 				img {
 					width: 100%;
@@ -149,6 +188,15 @@
 						margin-bottom: 10px;
 					}
 				}
+			}
+
+			.card-observer-animate {
+				@for $i from 1 through 4 {
+					&:nth-child(#{$i}) {
+						transform: translateY(0); // IntersectionObserver animation
+					}
+				}
+				opacity: 1;
 			}
 		}
 	}

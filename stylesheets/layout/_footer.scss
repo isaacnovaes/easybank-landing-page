@@ -1,5 +1,7 @@
 footer {
 	background-color: var(--dark-blue);
+	transition: 1s;
+	opacity: 0; // // IntersectionObserver animation
 
 	.footer-container {
 		@include container;
@@ -83,4 +85,8 @@ footer {
 			}
 		}
 	}
+}
+
+.footer-observer-animate {
+	opacity: 1;
 }

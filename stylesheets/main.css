@@ -93,7 +93,8 @@ button:-moz-focusring,
 
 header {
   background-color: var(--white);
-  position: relative;
+  width: 100%;
+  position: fixed;
   z-index: 3;
 }
 
@@ -114,6 +115,10 @@ header nav {
           align-items: center;
   position: relative;
   z-index: 1;
+}
+
+header nav > a {
+  display: block;
 }
 
 header nav .hamburger {
@@ -246,6 +251,10 @@ header .nav-links-bg-active {
   top: -120px;
 }
 
+.first-section .next-generation {
+  margin-top: 80px;
+}
+
 .first-section .next-generation h1 {
   font-size: 2.2rem;
   text-align: center;
@@ -274,6 +283,8 @@ header .nav-links-bg-active {
   transition: 0.5s;
   margin: 0 auto;
   margin-top: 30px;
+  -webkit-animation: fadeButton 1s 1s backwards;
+          animation: fadeButton 1s 1s backwards;
 }
 
 .first-section .next-generation button:hover {
@@ -285,6 +296,32 @@ header .nav-links-bg-active {
 
 .first-section .next-generation button a {
   color: var(--white);
+}
+
+@-webkit-keyframes fadeButton {
+  from {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeButton {
+  from {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .second-section {
@@ -341,6 +378,29 @@ header .nav-links-bg-active {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.second-section .second-section-container .cards-block .card:nth-child(1) {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.second-section .second-section-container .cards-block .card:nth-child(2) {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.second-section .second-section-container .cards-block .card:nth-child(3) {
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.second-section .second-section-container .cards-block .card:nth-child(4) {
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
 }
 
 .second-section .second-section-container .cards-block .card img {
@@ -365,6 +425,30 @@ header .nav-links-bg-active {
   font-weight: 400;
   text-align: center;
   line-height: 1.5;
+}
+
+.second-section .second-section-container .cards-block .card-observer-animate {
+  opacity: 1;
+}
+
+.second-section .second-section-container .cards-block .card-observer-animate:nth-child(1) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.second-section .second-section-container .cards-block .card-observer-animate:nth-child(2) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.second-section .second-section-container .cards-block .card-observer-animate:nth-child(3) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.second-section .second-section-container .cards-block .card-observer-animate:nth-child(4) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .third-section .third-section-container {
@@ -400,6 +484,29 @@ header .nav-links-bg-active {
   max-width: 400px;
   border-radius: 10px;
   background-color: var(--very-light-gray);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.third-section .third-section-container .cards-block .card:nth-child(1) {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.third-section .third-section-container .cards-block .card:nth-child(2) {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.third-section .third-section-container .cards-block .card:nth-child(3) {
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.third-section .third-section-container .cards-block .card:nth-child(4) {
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
 }
 
 .third-section .third-section-container .cards-block .card img {
@@ -446,8 +553,35 @@ header .nav-links-bg-active {
   margin-bottom: 10px;
 }
 
+.third-section .third-section-container .cards-block .card-observer-animate {
+  opacity: 1;
+}
+
+.third-section .third-section-container .cards-block .card-observer-animate:nth-child(1) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.third-section .third-section-container .cards-block .card-observer-animate:nth-child(2) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.third-section .third-section-container .cards-block .card-observer-animate:nth-child(3) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.third-section .third-section-container .cards-block .card-observer-animate:nth-child(4) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 footer {
   background-color: var(--dark-blue);
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
 }
 
 footer .footer-container {
@@ -576,6 +710,10 @@ footer .footer-container .button-block p {
   color: var(--grayish-blue);
 }
 
+.footer-observer-animate {
+  opacity: 1;
+}
+
 @media screen and (min-width: 900px) {
   body {
     overflow-x: hidden;
@@ -633,6 +771,8 @@ footer .footer-container .button-block p {
     transition: 0.5s;
   }
   header nav button {
+    -webkit-animation: fadeInButton 1s;
+            animation: fadeInButton 1s;
     display: block;
     width: 180px;
     font-weight: 400;
@@ -652,6 +792,30 @@ footer .footer-container .button-block p {
   }
   header nav button a {
     color: var(--white);
+  }
+  @-webkit-keyframes fadeInButton {
+    from {
+      -webkit-transform: translateX(500px);
+              transform: translateX(500px);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInButton {
+    from {
+      -webkit-transform: translateX(500px);
+              transform: translateX(500px);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
   }
   header .nav-links-bg,
   header .nav-links-bg-active {
@@ -704,6 +868,7 @@ footer .footer-container .button-block p {
     height: 900px;
   }
   main .first-section .next-generation {
+    margin-top: 0;
     width: 38%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;

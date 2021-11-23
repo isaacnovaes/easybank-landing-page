@@ -1,6 +1,7 @@
 header {
 	background-color: var(--white);
-	position: relative;
+	width: 100%;
+	position: fixed;
 	z-index: 3;
 
 	nav {
@@ -13,6 +14,9 @@ header {
 		position: relative;
 		z-index: 1; // make it above .nav-links-bg
 
+		> a {
+			display: block;
+		}
 		.hamburger {
 			background: url("../../images/icon-hamburger.svg") no-repeat center;
 			width: 50px;
